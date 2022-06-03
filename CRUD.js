@@ -1,3 +1,4 @@
+//Variables globales
 const codigo = document.querySelector("#codigo");
 const nombre = document.querySelector("#nombre");
 const nota1 = document.querySelector("#notaTrabajo");
@@ -9,6 +10,8 @@ const btnActualizar = document.getElementById("actualizar");
 const btnEliminar = document.getElementById("eliminar");
 const tabla = document.getElementById("tabla");
 let notas = []
+
+//Funciones
 codigo.addEventListener("keyup",(e)=>{
     n=false
     notas = JSON.parse(localStorage.getItem("notas"))
@@ -61,7 +64,6 @@ btnGuardar.addEventListener("click", (e)=>{
         alert("Se han guardado las notas con éxito")
     }
 })
-
 btnConsultar.addEventListener("click", (e)=>{
     notas = JSON.parse(localStorage.getItem("notas"))
     console.log(notas)
@@ -74,7 +76,6 @@ btnConsultar.addEventListener("click", (e)=>{
         }) 
     } 
 })
-
 btnActualizar.addEventListener("click", (e)=>{
     newnotas=[]
     if(codigo.value==""){
@@ -107,7 +108,6 @@ btnActualizar.addEventListener("click", (e)=>{
         alert("Se ha actualizado con éxito!!")
     }
 })
-
 btnEliminar.addEventListener("click", (e)=>{
     newnotas=[]
     if(codigo.value==""){

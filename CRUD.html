@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <title>Aplicativo Web - Registro</title>
     <link rel="icon" href="icobopagina.ico">
     <link rel="stylesheet" href="ESTILOS.css">
@@ -12,50 +17,42 @@
 <body>
     <div class="container mt-5">
         <h1>
-            <i>Estudiantes - Definitiva</i> <br>
-        <hr>   
+            <i>registro de notas</i> <br> 
+            <img src="registro.png" width=125px>
         </h1>
-        <img src="registro.png" width=140px>
+        
     
         <form id="formulario" class="mt-4">
-            <label for="codigo">Cédula: <span style="color: red;"> * </span></label>
-            <input type="text" name="codigo" id="codigo" required>
-            <br> <br>
-
-            <label for="nombre">Nombre: <span style="color: red;"> * </span></label>
-            <input type="text" name="nombre" id="nombre" required>
-            <br> <br>
-
-            <label for="notaTrabajo">Nota del trabajo (40%): <span style="color: red;"> * </span></label>
-            <input class="nota" type="text" name="notaTrabajo" id="notaTrabajo" required>
-            <br> <br>
-
-            <label for="notaParcial">Nota del parcial (60%): <span style="color: red;"> * </span></label>
-            <input class="nota"  type="text" name="notaParcial" id="notaParcial" required>
-            <br> <br>
+            <label for="codigo"><b>Cédula:</b> <span style="color: red;"> * </span></label>
+            <input type="text" name="codigo" id="codigo" class="form-control my-3" required>
             
-            <label for="notaFinal">Nota definitiva: </label>
-            <input class="nota"  type="text" name="notaFinal" id="notaFinal" readonly>
+            <label for="nombre"><b>Nombre:</b> <span style="color: red;"> * </span></label>
+            <input type="text" name="nombre" id="nombre" class="form-control my-3" required>
+            
+            <label for="notaTrabajo"><b>Nota del trabajo (40%):</b> <span style="color: red;"> * </span></label>
+            <input type="number" name="notaTrabajo" id="notaTrabajo" class="form-control my-3" required>
+            
+            <label for="notaParcial"><b>Nota del parcial (60%):</b> <span style="color: red;"> * </span></label>
+            <input   type="number" name="notaParcial" id="notaParcial" class="form-control my-3" required>
+            
+            <label for="notaFinal"><b>Nota definitiva:</b> </label>
+            <input  type="number" name="notaFinal" id="notaFinal" class="form-control my-3" readonly>
             
             <div class="botones">
-                <input type="button" value="Guardar" id="guardar">
+                <input type="button" value="Guardar" id="guardar"> 
                 <input type="button" value="Consultar" id="consultar">
                 <input type="button" value="Actualizar" id="actualizar">
                 <input type="button" value="Eliminar" id="eliminar">
             </div>
         </form>
+
         <div id="tabla"></div>
     </div>
     <hr> 
 
     <!--Pie de pagina-->
     <footer>
-        <p><i>"Esta pagina fue creada con el proposito de aprender y expandir nuestro conocimiento"</i></p>  
-        <a href="https://wa.link/z17kq3" target="_black" >
-            <p>Para obtener más información puedes comunicarte al Whatsapp
-                <a href="https://wa.link/z17kq3" target="_black" ><img src="WhatsApp-Logotipo.png" width="38" title="Whatsapp"/></a>
-            </p>
-        </a>
+        <p><i>"Esta página aplicamos los conocimientos adquiridos en la materia de Programación Web"</i></p>  
     </footer>
 
     <script src="CRUD.js"></script>
