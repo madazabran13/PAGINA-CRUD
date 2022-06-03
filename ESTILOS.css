@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+    font-family: "Raleway", sans-serif;
+    background: linear-gradient(to bottom, rgb(113, 168, 179), rgb(153, 172, 169));
+}
+div{
+    align-items: center;
+    text-align: center;
+    color: rgb(240, 243, 248);
+    margin: 20px;
+    padding: 20px 8px 5px 8px;
+}
+.mt-5{
+    background-color: rgb(184, 210, 241);
+    border-radius: 8px;
+}
+.mt-5 h3{
+    text-align: center;
+    color: rgb(21, 36, 49);
+    font-family: "Avant Garde";
+    font-size: 24px;
+    font-style: oblique;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    text-shadow: 3px 3px 3px gray;
+}
+.mt-5 .mt-4{
+    color: rgb(65, 89, 105);
+}
+.nota{
+    width: 60px !important;
+}
+input[type="text"], input[type="number"]{
+    font-size: 20px;
+    border-radius: 8px;
+}
+.botones{
+    align-items: center;
+}
+input[type="button"]{
+    font-size: 17px;
+    background-color: rgb(119, 166, 194);
+    color: rgb(0, 0, 0);
+    margin: 0 5px 0 5px;
+    height: 30px;
+    border-radius: 8px;
+}
+input[type="button"]:hover{
+    box-shadow: 3px 3px 3px grey;
+    transition: 0.3s;
+    background-color: rgb(128, 228, 146);
+}
+#tabla{
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(14, 30, 73);
+}

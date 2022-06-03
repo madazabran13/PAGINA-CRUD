@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo Web - Registro</title>
+    <link rel="icon" href="icobopagina.ico">
+    <link rel="stylesheet" href="ESTILOS.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h3>
+            <i>ESTUDIANTES: REGISTRO DE NOTAS</i> <br>
+            <img src="registro.png" width=140px>
+        </h3>
+
+        <form id="formulario" class="mt-4">
+            <label for="codigo">Cédula: <span style="color: red;"> * </span></label>
+            <input type="text" name="codigo" id="codigo" required>
+            <br> <br>
+
+            <label for="nombre">Nombre: <span style="color: red;"> * </span></label>
+            <input type="text" name="nombre" id="nombre" required>
+            <br> <br>
+
+            <label for="notaTrabajo">Escriba la nota del trabajo (40%): <span style="color: red;"> * </span></label>
+            <input class="nota" type="text" name="notaTrabajo" id="notaTrabajo" required>
+            <br> <br>
+
+            <label for="notaParcial">Escriba la nota del parcial (60%): <span style="color: red;"> * </span></label>
+            <input class="nota"  type="text" name="notaParcial" id="notaParcial" required>
+            <br> <br>
+
+            <label for="notaFinal">Nota definitiva: </label>
+            <input class="nota"  type="text" name="notaFinal" id="notaFinal" readonly>
+            
+            <div class="botones">
+                <input type="button" value="Guardar" id="guardar">
+                <input type="button" value="Consultar" id="consultar">
+                <input type="button" value="Actualizar" id="actualizar">
+                <input type="button" value="Eliminar" id="eliminar">
+            </div>
+        </form>
+        <div id="tabla"></div>
+    </div>
+    <script src="CRUD.js"></script>
+</body>
+</html>
