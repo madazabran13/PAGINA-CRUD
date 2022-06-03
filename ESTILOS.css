@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body{
     font-family: "Raleway", sans-serif;
-    background: linear-gradient(to bottom, rgb(113, 168, 179), rgb(153, 172, 169));
+    background: linear-gradient(to bottom, rgba(124, 185, 148, 0.651), rgb(197, 226, 209));
 }
 div{
     align-items: center;
@@ -11,14 +11,14 @@ div{
     padding: 20px 8px 5px 8px;
 }
 .mt-5{
-    background-color: rgb(184, 210, 241);
-    border-radius: 8px;
+    background-color: rgb(163, 206, 201);
+    border-radius: 2px;
 }
-.mt-5 h3{
+.mt-5 h1{
     text-align: center;
     color: rgb(21, 36, 49);
     font-family: "Avant Garde";
-    font-size: 24px;
+    font-size: 25px;
     font-style: oblique;
     text-align: center;
     text-transform: uppercase;
@@ -31,12 +31,12 @@ div{
 .nota{
     width: 60px !important;
 }
+.botones{
+    align-items: center;
+}
 input[type="text"], input[type="number"]{
     font-size: 20px;
     border-radius: 8px;
-}
-.botones{
-    align-items: center;
 }
 input[type="button"]{
     font-size: 17px;
@@ -50,10 +50,21 @@ input[type="button"]:hover{
     box-shadow: 3px 3px 3px grey;
     transition: 0.3s;
     background-color: rgb(128, 228, 146);
+    cursor: pointer;
+}
+input[id="notaFinal"]:hover{
+    cursor: not-allowed;
 }
 #tabla{
     align-items: center;
     text-align: center;
     margin-top: 50px;
     color: rgb(14, 30, 73);
+}
+footer{
+    text-align: center;
+    padding: 0.5px;
+    margin: auto;
+    height: auto;
+    border-radius: 8px;
 }

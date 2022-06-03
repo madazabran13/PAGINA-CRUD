@@ -11,11 +11,12 @@
 
 <body>
     <div class="container mt-5">
-        <h3>
-            <i>ESTUDIANTES: REGISTRO DE NOTAS</i> <br>
-            <img src="registro.png" width=140px>
-        </h3>
-
+        <h1>
+            <i>Estudiantes - Definitiva</i> <br>
+        <hr>   
+        </h1>
+        <img src="registro.png" width=140px>
+    
         <form id="formulario" class="mt-4">
             <label for="codigo">Cédula: <span style="color: red;"> * </span></label>
             <input type="text" name="codigo" id="codigo" required>
@@ -32,7 +33,7 @@
             <label for="notaParcial">Escriba la nota del parcial (60%): <span style="color: red;"> * </span></label>
             <input class="nota"  type="text" name="notaParcial" id="notaParcial" required>
             <br> <br>
-
+            
             <label for="notaFinal">Nota definitiva: </label>
             <input class="nota"  type="text" name="notaFinal" id="notaFinal" readonly>
             
@@ -45,6 +46,18 @@
         </form>
         <div id="tabla"></div>
     </div>
+    <hr> 
+
+    <!--Pie de pagina-->
+    <footer>
+        <p><i>"Esta pagina fue creada con el proposito de aprender y expandir nuestro conocimiento"</i></p>  
+        <a href="https://wa.link/z17kq3" target="_black" >
+            <p>Para obtener más información puedes comunicarte al Whatsapp
+                <a href="https://wa.link/z17kq3" target="_black" ><img src="WhatsApp-Logotipo.png" width="38" title="Whatsapp"/></a>
+            </p>
+        </a>
+    </footer>
+
     <script src="CRUD.js"></script>
 </body>
 </html>
