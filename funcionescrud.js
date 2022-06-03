@@ -66,7 +66,7 @@ btnGuardar.addEventListener("click", (e)=>{
         nota2.value=""
         notaD.value=""
         tabla.innerHTML=""
-        alert("Se han guardado las notas con éxito")
+        alert("Se han guardado los datos con éxito!!")
     }
 })
 btnConsultar.addEventListener("click", (e)=>{
