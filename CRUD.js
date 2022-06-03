@@ -1,6 +1,7 @@
 //Variables globales
 const codigo = document.querySelector("#codigo");
 const nombre = document.querySelector("#nombre");
+const asignatura = document.querySelector("#asignatura");
 const nota1 = document.querySelector("#notaTrabajo");
 const nota2 = document.querySelector("#notaParcial");
 const notaD = document.querySelector("#notaFinal");
@@ -18,6 +19,7 @@ codigo.addEventListener("keyup",(e)=>{
     notas.map(nota =>{
         if(nota.codigo==codigo.value){
             nombre.value=nota.nombre
+            asignatura.value=nota.asignatura
             nota1.value=nota.notaTrabajo
             nota2.value=nota.notaParcial
             notaD.value=nota.notaDefinitiva
@@ -25,6 +27,7 @@ codigo.addEventListener("keyup",(e)=>{
         }
         else if(n==false){
             nombre.value=""
+            asignatura.value=""
             nota1.value=""
             nota2.value=""
             notaD.value=""
@@ -42,13 +45,14 @@ btnGuardar.addEventListener("click", (e)=>{
    if (notas==null){
        notas=[]
    }
-    if(codigo.value=="" || nombre.value=="" || nota1.value=="" || nota2.value==""){
+    if(codigo.value=="" || nombre.value=="" || asignatura.value=="" || nota1.value=="" || nota2.value==""){
         alert("Debe llenar todos los campos antes de guardar")
     }
     else{
         est = {
             codigo: codigo.value,
             nombre: nombre.value,
+            asignatura: asignatura.value,
             notaTrabajo: nota1.value,
             notaParcial: nota2.value,
             notaDefinitiva: notaD.value
@@ -57,6 +61,7 @@ btnGuardar.addEventListener("click", (e)=>{
         localStorage.setItem("notas", JSON.stringify(notas))
         codigo.value=""
         nombre.value=""
+        asignatura.value=""
         nota1.value=""
         nota2.value=""
         notaD.value=""
@@ -72,14 +77,14 @@ btnConsultar.addEventListener("click", (e)=>{
         alert("No se encuentra ningún estudiante registrado")
     }else{
         notas.map(nota =>{
-            tabla.innerHTML+=`<li><b>Cédula:</b> ${nota.codigo}  -  <b>Nombre:</b> ${nota.nombre}  -  <b>Nota Definitiva:</b> ${nota.notaDefinitiva}</li><br>`
+            tabla.innerHTML+=`<li><b>Cédula:</b> ${nota.codigo}  -  <b>Nombres:</b> ${nota.nombre}  -  <b>Asignatura:</b> ${nota.asignatura}  -  <b>Nota Definitiva:</b> ${nota.notaDefinitiva}</li><br>`
         }) 
     } 
 })
 btnActualizar.addEventListener("click", (e)=>{
     newnotas=[]
     if(codigo.value==""){
-        alert("Debe digitar la cédula primero para actualizar")
+        alert("Debe digitar la cédula primero para actualizar!!")
     }
     else{
         notas = JSON.parse(localStorage.getItem("notas"))
@@ -88,6 +93,7 @@ btnActualizar.addEventListener("click", (e)=>{
                 est={
                     codigo: codigo.value,
                     nombre: nombre.value,
+                    asignatura: asignatura.value,
                     notaTrabajo: nota1.value,
                     notaParcial: nota2.value,
                     notaDefinitiva: notaD.value
@@ -101,6 +107,7 @@ btnActualizar.addEventListener("click", (e)=>{
         localStorage.setItem("notas", JSON.stringify(newnotas))
         codigo.value=""
         nombre.value=""
+        asignatura.value=""
         nota1.value=""
         nota2.value=""
         notaD.value=""
@@ -111,7 +118,7 @@ btnActualizar.addEventListener("click", (e)=>{
 btnEliminar.addEventListener("click", (e)=>{
     newnotas=[]
     if(codigo.value==""){
-        alert("Debe digitar la cédula primero para eliminar")
+        alert("Debe digitar la cédula primero para eliminar!!")
     }
     else{
         notas = JSON.parse(localStorage.getItem("notas"))
@@ -126,6 +133,7 @@ btnEliminar.addEventListener("click", (e)=>{
         localStorage.setItem("notas", JSON.stringify(newnotas))
         codigo.value=""
         nombre.value=""
+        asignatura.value=""
         nota1.value=""
         nota2.value=""
         notaD.value=""
