@@ -41,10 +41,10 @@ nota2.addEventListener("keyup",(e)=>{
     notaD.value=Math.round((nota1.value*0.4+nota2.value*0.6)*10)/10
 })
 btnGuardar.addEventListener("click", (e)=>{
-   notas=JSON.parse(localStorage.getItem("notas"))
-   if (notas==null){
-       notas=[]
-   }
+    notas=JSON.parse(localStorage.getItem("notas"))
+    if (notas==null){  //vacia
+        notas=[]
+    }
     if(codigo.value=="" || nombre.value=="" || asignatura.value=="" || nota1.value=="" || nota2.value==""){
         alert("Debe llenar todos los campos antes de guardar")
     }
