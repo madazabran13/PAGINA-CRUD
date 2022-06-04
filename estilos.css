@@ -40,7 +40,7 @@ body{
     display: flex;
     height: calc(100vh - 70px);
     align-items:center;
-    color: rgb(209, 212, 250);  
+    color: rgb(255, 255, 255);  
     padding: 80px;
 }
 .hero__texts{
